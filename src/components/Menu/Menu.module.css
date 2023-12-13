@@ -1,0 +1,50 @@
+.menuWrapper {
+  display: none;
+  position: relative;
+}
+
+.menuButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 200ms;
+}
+
+.menuButton:hover {
+  opacity: 0.7;
+}
+
+.menuBody {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #303030;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.menuLink {
+  color: var(--text-soft);
+  text-decoration: none;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  transition: all 200ms;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.menuLink:hover {
+  color: var(--text);
+  background-color: var(--bg-soft);
+}
+
+@media only screen and (max-width: 768px) {
+  .menuWrapper {
+    display: block;
+  }
+}

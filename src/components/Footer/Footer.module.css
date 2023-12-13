@@ -1,0 +1,103 @@
+.topSide {
+  display: flex;
+  align-items: start;
+  gap: 3rem;
+}
+
+.leftSide {
+  flex: 3;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.info {
+  font-size: 1.3rem;
+  color: var(--text-soft);
+}
+
+.rightSide {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listTitle {
+  font-size: 1.8rem;
+}
+
+.listLink {
+  text-decoration: none;
+  color: var(--text-soft);
+  font-size: 1.3rem;
+  opacity: color 200ms;
+}
+
+.listLink:hover {
+  color: var(--text);
+}
+
+.bottomSide {
+  border-top: 1px solid var(--bg-soft);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.github {
+  font-style: italic;
+  text-decoration: none;
+  color: inherit;
+  margin-left: 0.5rem;
+  transition: all 200ms;
+}
+
+.github:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1200px) {
+  .topSide {
+    flex-direction: column;
+  }
+
+  .rightSide {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .topSide {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    width: 200px;
+  }
+
+  .info {
+    font-size: 1rem;
+  }
+
+  .listTitle {
+    font-size: 1.3rem;
+  }
+
+  .listLink {
+    font-size: 1rem;
+  }
+}
