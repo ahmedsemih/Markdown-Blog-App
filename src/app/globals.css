@@ -1,6 +1,7 @@
 :root {
   --bg: #202020;
-  --bg-soft: #404040;
+  --border: #404040;
+  --bg-soft: #282828;
   --text: #f9f9f9;
   --text-soft: #cccccc;
   --primary: #427d9d;
@@ -28,6 +29,10 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
+}
+
+.page{
+  padding: 1rem;
 }
 
 .sticky {
