@@ -1,0 +1,111 @@
+.card {
+  background-color: var(--bg-soft);
+  text-decoration: none;
+  color: inherit;
+  height: 600px;
+  display: block;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 200ms;
+}
+
+.card:hover {
+  border: 1px solid #707070;
+}
+
+.cardImage {
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.cardTitle {
+  font-size: 2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 500px;
+}
+
+.cardIntro {
+  color: var(--text-soft);
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.authorImage {
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+}
+
+.authorName {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.date {
+  color: var(--text-soft);
+}
+
+@media only screen and (max-width: 1440px) {
+  .card {
+    height: 520px;
+  }
+
+  .cardTitle {
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .cardTitle {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    height: 600px;
+  }
+
+  .cardTitle {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card {
+    height: 500px;
+  }
+
+  .cardTitle {
+    width: 280px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    height: 464px;
+  }
+
+  .cardTitle {
+    width: 200px;
+  }
+}
