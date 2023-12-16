@@ -19,6 +19,7 @@ const Card = ({ post }: Props) => {
           <h6 className={styles.cardTitle}>{post.title}</h6>
           <p className={styles.cardIntro}>{shortenString(post.intro, 97)}</p>
         </article>
+        <div className={styles.imageWrapper}>
         <Image
           className={styles.cardImage}
           src={post.image}
@@ -26,6 +27,7 @@ const Card = ({ post }: Props) => {
           width={200}
           height={200}
         />
+        </div>
       </div>
       <div className={styles.cardFooter}>
         <div className={styles.cardInfo}>
