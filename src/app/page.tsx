@@ -1,6 +1,16 @@
+import { allPosts } from 'contentlayer/generated';
+import { FeatureSection, PostSection, WelcomeSection } from '@/components';
+
 const Home = () => {
+  const posts = allPosts.reverse();
+  const featuredPosts = posts.filter(post => post.featured == true);
+
   return (
-    <div>Home</div>
+    <main className="container" >
+      <WelcomeSection />
+      <FeatureSection posts={featuredPosts} />
+      <PostSection posts={posts} />
+    </main>
   )
 }
 
