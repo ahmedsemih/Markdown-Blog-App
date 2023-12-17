@@ -4,12 +4,13 @@ const getSlug = (doc: any) => doc._raw.sourceFileName.replace(/\.mdx$/, "");
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: `blog/**/*.md`,
+  filePathPattern: `**/*.mdx`,
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     intro: { type: "string", required: true },
     publishedAt: { type: "date", required: true },
-    categories: { type: "json", required: true },
+    category: { type: "string", required: true },
     author: { type: "string", required: true },
     featured: { type: "boolean", default: false },
   },
@@ -25,4 +26,7 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
-export default makeSource({ contentDirPath: "content", documentTypes: [Post] });
+export default makeSource({
+  contentDirPath: "src/posts",
+  documentTypes: [Post],
+});
