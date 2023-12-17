@@ -14,7 +14,7 @@ const PostSection = ({ posts, category }: Props) => {
       <p className={styles.subTitle}>
         {category
           ? `All posts in the ${category} category.`
-          : `All posts from newest to oldest.`}
+          : `All posts written by our authors.`}
       </p>
       <div className={styles.posts}>
         {posts?.length > 0 ? (

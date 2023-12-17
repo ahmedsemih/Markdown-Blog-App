@@ -1,11 +1,11 @@
-import { Post } from "contentlayer/generated";
-import Image from "next/image";
-import React from "react";
-import styles from "./FeaturedCard.module.css";
-import Link from "next/link";
-import getAuthorImage from "@/utils/getAuthorImage";
 import moment from "moment";
+import Link from "next/link";
+import Image from "next/image";
+
+import { Post } from "contentlayer/generated";
+import styles from "./FeaturedCard.module.css";
 import shortenString from "@/utils/shortenString";
+import getAuthorImage from "@/utils/getAuthorImage";
 
 type Props = {
   post: Post;
@@ -25,7 +25,7 @@ const FeaturedCard = ({ post }: Props) => {
           />
         </div>
         <h6 className={styles.cardTitle}>{post.title}</h6>
-        <p className={styles.cardIntro}>{shortenString("Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis dolorum dignissimos minima, ipsum animi similique repellendus quisquam quaerat beatae culpa, dolor quibusdam cupiditate quis. Nesciunt quia, ratione, minus ducimus possimus aspernatur explicabo itaque excepturi nam deleniti voluptates in non asperiores error dolorum facilis. Iure nam, sit accusantium quis totam quas, beatae mollitia voluptatum dolore hic maiores harum quod atque. Modi tempora cumque consequuntur suscipit nobis pariatur quam, facilis mollitia inventore placeat a optio, sit adipisci quis aliquam necessitatibus quisquam quo, corporis voluptates illo autem commodi ipsum maiores vitae. Consequuntur omnis eligendi id repellendus laboriosam culpa cupiditate adipisci officiis inventore.", 137)}</p>
+        <p className={styles.cardIntro}>{shortenString(post.intro, 137)}</p>
       </div>
       <div className={styles.authorInfo}>
         <Image
