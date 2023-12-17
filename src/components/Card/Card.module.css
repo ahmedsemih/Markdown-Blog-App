@@ -19,8 +19,10 @@
   gap: 1rem;
 }
 
-.imageWrapper{
+.imageWrapper {
   width: 124px;
+  min-width: 124px;
+  min-height: 124px;
   height: 124px;
   overflow: hidden;
   border-radius: 1rem;
@@ -46,6 +48,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 330px;
 }
 
 .cardFooter {
@@ -74,12 +77,6 @@
   margin: 0 0.5rem;
 }
 
-.categories {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
 .categoryLink {
   background-color: var(--border);
   border: 1px solid var(--bg);
@@ -88,6 +85,7 @@
   color: var(--text-soft);
   text-decoration: none;
   transition: all 200ms;
+  margin-left: auto;
 }
 
 .categoryLink:hover {
@@ -95,55 +93,41 @@
   color: var(--text);
 }
 
-@media only screen and (max-width: 1200px) {
-  .cardFooter {
-    flex-direction: column;
+@media only screen and (max-width: 1700px) {
+  .cardTitle {
+    width: 260px;
   }
+}
 
-  .categories {
-    margin-left: 0;
+@media only screen and (max-width: 1200px) {
+  .cardTitle {
+    width: 200px;
   }
 }
 
 @media only screen and (max-width: 1030px) {
-  .cardFooter {
-    flex-direction: row;
-  }
-
-  .categories {
-    margin-left: auto;
+  .cardTitle {
+    width: 560px;
   }
 }
 @media only screen and (max-width: 996px) {
-  .cardFooter {
-    flex-direction: column;
-  }
-
-  .categories {
-    margin-left: 0;
+  .cardTitle {
+    width: 200px;
   }
 }
 
 @media only screen and (max-width: 808px) {
-  .cardFooter {
-    flex-direction: row;
-  }
-
-  .categories {
-    margin-left: auto;
+  .cardTitle {
+    width: 500px;
   }
 }
 @media only screen and (max-width: 768px) {
+  .cardTitle {
+    width: 300px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-  .cardFooter {
-    flex-direction: column;
-  }
-
-  .categories {
-    margin-left: 0;
-  }
   .cardBody {
     gap: 0.5rem;
   }
@@ -154,10 +138,15 @@
 
   .cardTitle {
     font-size: 1.1rem;
+    width: 170px;
   }
 
   .cardIntro {
     font-size: 0.8rem;
+  }
+
+  .categoryLink {
+    display: none;
   }
 }
 
@@ -165,5 +154,9 @@
   .authorName,
   .date {
     font-size: 0.9rem;
+  }
+
+  .cardTitle {
+    width: 100px;
   }
 }

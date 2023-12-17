@@ -20,13 +20,13 @@ const Card = ({ post }: Props) => {
           <p className={styles.cardIntro}>{shortenString(post.intro, 97)}</p>
         </article>
         <div className={styles.imageWrapper}>
-        <Image
-          className={styles.cardImage}
-          src={post.image}
-          alt={post.title}
-          width={200}
-          height={200}
-        />
+          <Image
+            className={styles.cardImage}
+            src={post.image}
+            alt={post.title}
+            width={200}
+            height={200}
+          />
         </div>
       </div>
       <div className={styles.cardFooter}>
@@ -44,19 +44,14 @@ const Card = ({ post }: Props) => {
             {moment(post.publishedAt).fromNow()}
           </span>
         </div>
-        <div className={styles.categories}>
-          {post.categories.length > 0 &&
-            post.categories.map((category: string) => (
-              <Link
-                className={styles.categoryLink}
-                key={category}
-                href={`/categories/${category}`}
-                title={category}
-              >
-                {category}
-              </Link>
-            ))}
-        </div>
+        <Link
+          className={styles.categoryLink}
+          key={post.category}
+          href={`/categories/${post.category}`}
+          title={post.category}
+        >
+          {post.category}
+        </Link>
       </div>
     </Link>
   );
