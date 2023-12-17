@@ -1,0 +1,13 @@
+.alertBody {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  background-color: var(--bg-soft);
+  border: 1px solid var(--border);
+}
+
+.message {
+  color: var(--text-soft);
+}

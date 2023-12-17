@@ -5,3 +5,4 @@ export { default as Card } from "./Card";
 export { default as FeatureSection } from "./FeatureSection";
 export { default as WelcomeSection } from "./WelcomeSection";
 export { default as PostSection } from "./PostSection";
+export { default as MdxWrapper } from "./MdxWrapper";

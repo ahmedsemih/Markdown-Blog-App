@@ -1,0 +1,214 @@
+.postIntro {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.authorImage {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+
+.authorName {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.intro {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.postImage {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.article {
+  padding: 2rem 0;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.article > h1 {
+  font-size: 2.5rem;
+  margin: 3rem 0 2rem 0;
+}
+
+.article > h2 {
+  font-size: 2.2rem;
+  margin: 3rem 0 2rem 0;
+}
+.article > h3 {
+  font-size: 1.8rem;
+  margin: 3rem 0 2rem 0;
+}
+.article > h4 {
+  font-size: 1.5rem;
+  margin: 3rem 0 2rem 0;
+}
+.article > h5 {
+  font-size: 1.2rem;
+  margin: 3rem 0 2rem 0;
+}
+.article > h6 {
+  font-size: 1rem;
+  margin: 3rem 0 2rem 0;
+}
+
+.article > p,
+.article > a,
+.article > ol,
+.article > ul,
+.article > * > li,
+.article > table,
+.article > table > *,
+.article > em,
+.article > i,
+.article > b,
+.article > strong,
+.article > span,
+.article > blockquote {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  line-height: 2.5rem;
+}
+
+.article > img,
+.article > * > img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.article > code,
+.article > pre {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  line-height: 1.5;
+  background-color: var(--bg-soft);
+  padding: 1rem;
+  overflow: auto;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  font-size: 1.2rem;
+}
+
+.article > blockquote {
+  background-color: var(--bg-soft);
+  border-left: 3px solid var(--text-soft);
+  padding: 1rem;
+  font-style: italic;
+  margin: 2rem 0;
+}
+
+.article > caption,
+.article > figcaption {
+  color: var(--text-soft);
+  font-size: 1rem;
+  margin: 1rem;
+  line-height: 2.5rem;
+}
+
+.article > ul,
+.article > ol {
+  padding-left: 2rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .postIntro,
+  .article {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .postIntro,
+  .article {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .article > h1 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .article > h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+  }
+  .article > h3 {
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem 0;
+  }
+  .article > h4 {
+    font-size: 1rem;
+    margin: 2rem 0 1rem 0;
+  }
+  .article > h5 {
+    font-size: 0.9rem;
+    margin: 2rem 0 1rem 0;
+  }
+  .article > h6 {
+    font-size: 0.7rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .article > p,
+  .article > a,
+  .article > ol,
+  .article > ul,
+  .article > * > li,
+  .article > table,
+  .article > table > *,
+  .article > em,
+  .article > i,
+  .article > b,
+  .article > strong,
+  .article > span,
+  .article > blockquote {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    line-height: 2rem;
+  }
+
+  .article > caption,
+  .article > figcaption {
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    line-height: 2rem;
+  }
+
+  .article > ul,
+  .article > ol {
+    padding-left: 1rem;
+  }
+
+  .article > code,
+  .article > pre {
+    font-size: 0.9rem;
+  }
+}
