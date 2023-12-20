@@ -50,6 +50,10 @@
   width: 330px;
 }
 
+.cardIntro{
+  color: var(--text-soft);
+}
+
 .cardFooter {
   display: flex;
   margin-top: 1rem;
