@@ -13,8 +13,8 @@ type Props = {
 
 const Card = ({ post }: Props) => {
   return (
-    <Link href={`/posts/${post.slug}`} className={styles.card}>
-      <div className={styles.cardBody}>
+    <div className={styles.card}>
+      <Link href={`/posts/${post.slug}`} className={styles.cardBody}>
         <article className={styles.cardArticle}>
           <h6 className={styles.cardTitle}>{post.title}</h6>
           <p className={styles.cardIntro}>{shortenString(post.intro, 97)}</p>
@@ -28,9 +28,9 @@ const Card = ({ post }: Props) => {
             height={200}
           />
         </div>
-      </div>
+      </Link>
       <div className={styles.cardFooter}>
-        <div className={styles.cardInfo}>
+        <Link href={`/posts/${post.slug}`} className={styles.cardInfo}>
           <Image
             className={styles.authorImage}
             src={getAuthorImage(post.author)!}
@@ -43,7 +43,7 @@ const Card = ({ post }: Props) => {
           <span className={styles.date}>
             {moment(post.publishedAt).fromNow()}
           </span>
-        </div>
+        </Link>
         <Link
           className={styles.categoryLink}
           key={post.category}
@@ -53,7 +53,7 @@ const Card = ({ post }: Props) => {
           {post.category}
         </Link>
       </div>
-    </Link>
+    </div>
   );
 };
 

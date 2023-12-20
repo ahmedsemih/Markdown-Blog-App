@@ -1,11 +1,10 @@
 .card {
   background-color: var(--bg-soft);
   border: 1px solid var(--border);
-  text-decoration: none;
-  color: inherit;
   padding: 1rem;
   border-radius: 1rem;
   transition: all 200ms;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -91,6 +90,12 @@
 .categoryLink:hover {
   background-color: var(--bg);
   color: var(--text);
+}
+
+.cardInfo, .cardBody{
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1700px) {
