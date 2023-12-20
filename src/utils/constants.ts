@@ -25,18 +25,3 @@ export const categories = [
         title: 'Other Off-Topic Articles'
     }
 ]
-
-export const authors = [
-    {
-        name: 'Jane Doe',
-        image: '/authors/jane-doe.jpg'
-    },
-    {
-        name: 'John Doe',
-        image: '/authors/john-doe.jpg'
-    }, 
-    {
-        name: 'Kate Davies',
-        image: '/authors/kate-davies.jpg'
-    }
-]

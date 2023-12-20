@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Post } from "contentlayer/generated";
 import styles from "./FeaturedCard.module.css";
 import shortenString from "@/utils/shortenString";
-import getAuthorImage from "@/utils/getAuthorImage";
 
 type Props = {
   post: Post;
@@ -31,7 +30,7 @@ const FeaturedCard = ({ post }: Props) => {
       <div className={styles.authorInfo}>
         <Image
           className={styles.authorImage}
-          src={getAuthorImage(post.author)!}
+          src={post.authorImage}
           alt={post.author}
           width={100}
           height={100}

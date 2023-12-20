@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 
 const getSlug = (doc: any) => doc._raw.sourceFileName.replace(/\.mdx$/, "");
+const getAuthorSlug = (doc: any) => doc.author.replace(" ", "-").toLowerCase();
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -22,6 +23,10 @@ export const Post = defineDocumentType(() => ({
     image: {
       type: "string",
       resolve: (doc) => `/blog/${getSlug(doc)}/image.jpg`,
+    },
+    authorImage: {
+      type: "string",
+      resolve: (doc) => `/authors/${getAuthorSlug(doc)}/image.jpg`,
     },
   },
 }));

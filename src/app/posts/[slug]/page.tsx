@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 
 import styles from "./page.module.css";
 import { MdxWrapper } from "@/components";
-import getAuthorImage from "@/utils/getAuthorImage";
 import { Post, allPosts } from "contentlayer/generated";
 
 type Props = {
@@ -29,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const PostPage = ({ params }: Props) => {
   const post = allPosts.find((post) => post.slug === params.slug);
-  const { title, intro, publishedAt, author, image, body } = post!;
+  const { title, intro, publishedAt, author, authorImage, image, body } = post!;
 
   return (
     <main className="container page">
@@ -39,7 +38,7 @@ const PostPage = ({ params }: Props) => {
           {post?.image && (
             <Image
               className={styles.authorImage}
-              src={getAuthorImage(author)!}
+              src={authorImage}
               alt={author}
               width={200}
               height={200}

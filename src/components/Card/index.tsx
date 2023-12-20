@@ -5,7 +5,6 @@ import Image from "next/image";
 import styles from "./Card.module.css";
 import { Post } from "contentlayer/generated";
 import shortenString from "@/utils/shortenString";
-import getAuthorImage from "@/utils/getAuthorImage";
 
 type Props = {
   post: Post;
@@ -33,7 +32,7 @@ const Card = ({ post }: Props) => {
         <Link href={`/posts/${post.slug}`} className={styles.cardInfo}>
           <Image
             className={styles.authorImage}
-            src={getAuthorImage(post.author)!}
+            src={post.authorImage}
             alt={post.author}
             width={100}
             height={100}
