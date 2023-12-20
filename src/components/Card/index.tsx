@@ -16,7 +16,7 @@ const Card = ({ post }: Props) => {
     <div className={styles.card}>
       <Link href={`/posts/${post.slug}`} className={styles.cardBody}>
         <article className={styles.cardArticle}>
-          <h6 className={styles.cardTitle}>{post.title}</h6>
+          <h2 className={styles.cardTitle}>{post.title}</h2>
           <p className={styles.cardIntro}>{shortenString(post.intro, 97)}</p>
         </article>
         <div className={styles.imageWrapper}>

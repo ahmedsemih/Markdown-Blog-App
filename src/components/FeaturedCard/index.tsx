@@ -20,11 +20,12 @@ const FeaturedCard = ({ post }: Props) => {
             className={styles.cardImage}
             src={post.image}
             alt={post.title}
+            loading="eager"
             width={500}
-            height={500}
+            height={300}
           />
         </div>
-        <h6 className={styles.cardTitle}>{post.title}</h6>
+        <h2 className={styles.cardTitle}>{post.title}</h2>
         <p className={styles.cardIntro}>{shortenString(post.intro, 137)}</p>
       </div>
       <div className={styles.authorInfo}>

@@ -22,7 +22,7 @@ const Footer = () => {
         </section>
         <section className={styles.rightSide}>
           <div className={styles.list}>
-            <h5 className={styles.listTitle}>Tech Stack</h5>
+            <h3 className={styles.listTitle}>Tech Stack</h3>
             <Link
               className={styles.listLink}
               target="_blank"
@@ -53,7 +53,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className={styles.list}>
-            <h5 className={styles.listTitle}>Categories</h5>
+            <h3 className={styles.listTitle}>Categories</h3>
             {categories.map((category) => (
               <Link
                 className={styles.listLink}
